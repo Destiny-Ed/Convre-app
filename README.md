@@ -16,10 +16,10 @@ A Few instruction to get you going:
 
 What the pages look like
 
-![ScreenShot](/assets/screens_one.png)
-![ScreenShot](/assets/screens_two.png)
-![ScreenShot](/assets/screens_three.png)
-![ScreenShot](/assets/screens_four.png)
+![alt text](https://github.com/Destiny-Ed/Convre-app/blob/master/assets/screen_one.png)
+![alt text](https://github.com/Destiny-Ed/Convre-app/blob/master/assets/screen_two.png)
+![alt text](https://github.com/Destiny-Ed/Convre-app/blob/master/assets/screen_three.png)
+![alt text](https://github.com/Destiny-Ed/Convre-app/blob/master/assets/screen_four.png)
 
 ## Getting Started
 
