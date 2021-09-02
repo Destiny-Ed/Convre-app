@@ -2,14 +2,15 @@
 
 Flutter application with simple authentication screens
 
-## To run the project on your machine:
+## To run the project on your machine.
 
-    - [Make sure you have Dart and Flutter installed](https://flutter.dev/docs/get-started/install)
-    - Make sure you have an IDE configured (Visual studio code, Android studio or Xcode)
-    - [clone this repository with git clone git@github.com:Destiny-Ed/Convre-app.git](git@github.com:Destiny-Ed/Convre-app.git)
-    - Before running the application check that all the dependency are downloaded with flutter pub get
-    - Connect your emulator or physical device and run the project
+A Few instruction to get you going:
 
+- [Make sure you have Dart and Flutter installed](https://flutter.dev/docs/get-started/install)
+- Make sure you have an IDE configured (Visual studio code, Android studio or Xcode)
+- [clone this repository with git clone git@github.com:Destiny-Ed/Convre-app.git](git@github.com:Destiny-Ed/Convre-app.git)
+- Before running the application check that all the dependency are downloaded with flutter pub get
+- Connect your emulator or physical device and run the project
 
 
 ## Getting Started
