@@ -1,9 +1,11 @@
 import 'package:convre/Constant/buttons.dart';
 import 'package:convre/Constant/colors.dart';
 import 'package:convre/Constant/form_field.dart';
-import 'package:convre/Screens/register.dart';
-import 'package:convre/Screens/reset.dart';
+import 'package:convre/Screens/AuthScreens/register.dart';
+import 'package:convre/Screens/AuthScreens/reset.dart';
 import 'package:flutter/material.dart';
+
+import '../main_activity.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -113,7 +115,11 @@ class _LoginState extends State<Login> {
                       ),
 
                       //Login Button
-                      FormButton(text: "Login"),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => MainActivity()));
+                        },
+                          child: FormButton(text: "Login")),
 
                       //Don't have an account
                       Container(

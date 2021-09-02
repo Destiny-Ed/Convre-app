@@ -1,22 +1,21 @@
 import 'package:convre/Constant/buttons.dart';
 import 'package:convre/Constant/colors.dart';
 import 'package:convre/Constant/form_field.dart';
-import 'package:convre/Screens/login.dart';
+import 'package:convre/Screens/AuthScreens/new_password.dart';
 import 'package:flutter/material.dart';
 
-
-class NewPassword extends StatefulWidget {
-  const NewPassword({Key? key}) : super(key: key);
+class Reset extends StatefulWidget {
+  const Reset({Key? key}) : super(key: key);
 
   @override
-  _NewPasswordState createState() => _NewPasswordState();
+  _ResetState createState() => _ResetState();
 }
 
-class _NewPasswordState extends State<NewPassword> {
+class _ResetState extends State<Reset> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body : SafeArea(
+      body: SafeArea(
         child: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
@@ -28,13 +27,13 @@ class _NewPasswordState extends State<NewPassword> {
                     primary: false,
                     shrinkWrap: true,
                     children: [
-                      //Header Text
+                      //Header text
                       Container(
                         padding: const EdgeInsets.all(20),
                         child: Column(
                           children: [
                             Text(
-                              "New Password",
+                              "Reset Password",
                               style: TextStyle(
                                 color: black,
                                 fontSize: 30,
@@ -44,35 +43,32 @@ class _NewPasswordState extends State<NewPassword> {
                             const SizedBox(height: 5,),
 
                             Text(
-                              "Enter the code you received and a new password",
+                              "Enter your username or email and we'll send you a link to get back into your account.",
                               textAlign: TextAlign.center,
                             ),
                           ],
                         ),
                       ),
                       const SizedBox(height: 20,),
-
-                      //Code
-                      CustomTextField(password: false, hint: "Code",),
-                      const SizedBox(height: 20,),
-
-                      //Password
-                      CustomTextField(hint: "Password",),
+                      //Email
+                      CustomTextField(password: false, hint: "Email/Username",),
 
                       const SizedBox(height: 20,),
-
-
-                      //Submit Button
+                      //Reset Button
                       FormButton(text: "Submit"),
 
-                      //Login with new account account
+                      //Don't have an account
                       Container(
                         alignment: Alignment.center,
-                        child: TextButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (_)=> Login()));
-                        }, child: Text("Login", style: TextStyle(color: primaryColor),)),
+                        child: TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => NewPassword()));
+                            },
+                            child: Text("Have Code?", style: TextStyle(color: primaryColor))),
                       ),
-
                     ],
                   ),
                 ),
