@@ -12,6 +12,14 @@ A Few instruction to get you going:
 - Before running the application check that all the dependency are downloaded with flutter pub get
 - Connect your emulator or physical device and run the project
 
+## ScreenShots
+
+What the pages look like
+
+![ScreenShot](/assets/screens_one.png)
+![ScreenShot](/assets/screens_two.png)
+![ScreenShot](/assets/screens_three.png)
+![ScreenShot](/assets/screens_four.png)
 
 ## Getting Started
 
