@@ -1,9 +1,11 @@
+import 'package:badges/badges.dart';
 import 'package:convre/Constant/colors.dart';
 import 'package:convre/Screens/BottomNavPages/communities.dart';
 import 'package:convre/Screens/BottomNavPages/home.dart';
 import 'package:convre/Screens/BottomNavPages/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'BottomNavPages/chat.dart';
 
@@ -47,15 +49,21 @@ class _MainActivityState extends State<MainActivity> {
   ///BottomNavigation Items
   List<BottomNavigationBarItem> _bottomItems() {
     final List<BottomNavigationBarItem> items = <BottomNavigationBarItem>[
-      BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+      BottomNavigationBarItem(icon: Icon(Icons.home_outlined, size: 20), label: "Home"),
       BottomNavigationBarItem(
           icon: Icon(
-            Icons.group,
+            FontAwesomeIcons.users,
+            size: 20,
+            color: grey,
           ),
           label: "Communities"),
       BottomNavigationBarItem(
-          icon: Icon(Icons.notifications), label: "Notification"),
-      BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
+          icon: Badge(
+            badgeContent: Text("0", style: TextStyle(color : orange),),
+              elevation: 0,
+              badgeColor: white,
+              child: Icon(Icons.notifications_outlined, color: grey,size : 20)), label: "Notification"),
+      BottomNavigationBarItem(icon: Icon(Icons.chat_bubble_outline, color : grey, size : 20), label: "Chat"),
     ];
 
     return items;

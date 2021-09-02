@@ -1,5 +1,6 @@
 import 'package:convre/Constant/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:marquee/marquee.dart';
 
 class HomePage extends StatefulWidget {
@@ -81,15 +82,19 @@ class _HomePageState extends State<HomePage> {
                   ...List.generate(10, (index) {
                     return ContentView();
                   }),
+
+                  const SizedBox(height : 150),
                 ],
               ),
             ),
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){}, child: Image.asset("assets/edit.png", width: 25, color: white,),),
     );
   }
 
+  ///
   Widget ContentView() {
     return Container(
       decoration: BoxDecoration(
@@ -104,39 +109,44 @@ class _HomePageState extends State<HomePage> {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text.rich(TextSpan(children: [
-                  TextSpan(
-                      text: "crypto_dna_africa ",
-                      style: TextStyle(
+                Expanded(
+                  child: Text.rich(TextSpan(children: [
+                    TextSpan(
+                        text: "zoe ",
+                        style: TextStyle(
+                            color: black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold)),
+                    TextSpan(
+                        text: "| 8 hours ago",
+                        style: TextStyle(
                           color: black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold)),
-                  TextSpan(
-                      text: "| 2 hours ago",
-                      style: TextStyle(
-                        color: black,
-                        fontSize: 16,
-                      ))
-                ])),
-                IconButton(
-                    onPressed: () {
-                      print("hello");
-                    },
-                    icon: Icon(Icons.more_horiz))
+                          fontSize: 16,
+                        ))
+                  ])),
+                ),
+
               ],
             ),
+            trailing:  IconButton(
+                onPressed: () {
+                  print("hello");
+                },
+                icon: Icon(Icons.more_horiz)),
             subtitle: Text("@crypto_dna_africa"),
             // trailing: ,
           ),
           ListTile(
             title: Text(
-                "Bitoin Miners post \$1.4 billion in revenue for August, data shows...",
+                "Bitcoin Miners post \$1.4 billion in revenue for August, data shows...",
                 style: TextStyle(
                     color: black, fontSize: 20, fontWeight: FontWeight.bold)),
             subtitle: Column(
               children: [
+                const SizedBox(height : 8),
                 Text(
                     "Bitcoin miners brought in approximately \$1.41 billion in revenue during the month of August, according to data compiled by The Block Research.The monthly figure is below the all-time peak of &amp;1.75 billion posted in March but represents a month-over-month increase - roughly 45% - from July’s \$971.83 million.The vast majority of the August revenu (...)"),
+                const SizedBox(height : 8),
                 Image.asset("assets/image.jpeg"),
 
                 Container(
@@ -146,14 +156,14 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Row(
                         children: [
-                          Icon(Icons.chat_bubble_outline,color: grey,),
+                          Image.asset("assets/chat.png", width: 25,color: grey,),
                           Text(" 0",style: TextStyle(fontSize: 20),)
                         ],
                       ),
                       const SizedBox(width: 20,),
                       Row(
                         children: [
-                          Icon(Icons.arrow_upward,color: grey,),
+                          Image.asset("assets/arrow_up.png", width: 25,color: grey,),
                           const SizedBox(width: 20,),
 
                           Text("0",style: TextStyle(fontSize: 20),)
@@ -163,14 +173,14 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(width: 20,),
                       Row(
                         children: [
-                          Icon(Icons.arrow_downward,color: grey,),
+                          Image.asset("assets/arrow_down.png", width: 25,color: grey,),
                           // Text(" 0",style: TextStyle(fontSize: 20),)
                         ],
                       ),
 
                       Expanded(child: Container(
                         alignment: Alignment.centerRight,
-                          child: IconButton(onPressed: (){}, icon: Icon(Icons.redo, color: grey,))))
+                          child: IconButton(onPressed: (){}, icon: Image.asset("assets/share.png", width: 20,color: grey,))))
                     ],
                   ),
                 )
